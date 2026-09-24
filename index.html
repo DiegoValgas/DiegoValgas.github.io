@@ -1,10 +1,428 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Diego Valgas - Desenvolvedor PHP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .title {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .subtitle {
+            font-family: "JetBrains Mono", monospace;
+            font-optical-sizing: auto;
+            font-style: normal;
+            letter-spacing: 0.08em;
+        }
+    </style>
 </head>
-<body>
-    <h1>Em manutenção...</h1>
+
+<body class="bg-zinc-100">
+    <main class="container mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8">
+        <header class="grid grid-cols-1 md:grid-cols-2">
+            <div class="avatar flex justify-center md:justify-end justify-center p-8">
+                <img src="./images/avatar.jpeg" alt="Diego Valgas" class="w-[250px] md:w-[350px] max-w-full aspect-square rounded-full object-cover shadow-lg ring-2 ring-white">
+            </div>
+
+            <div class="info flex h-full items-center justify-center md:justify-start">
+                <div class="info-text flex flex-col items-center text-center md:items-start md:text-left">
+                    <h1 class="title font-extrabold text-4xl text-zinc-700 mb-1">Diego Valgas</h1>
+
+                    <p class="subtitle text-xs text-zinc-400 mb-2">DESENVOLVEDOR PHP FULL STACK</p>
+
+                    <a class="flex items-center text-sm text-zinc-500 gap-2" href="https://www.google.com/maps/place/Blumenau,+SC/@-26.8560081,-49.2639115,11z/data=!3m1!4b1!4m6!3m5!1s0x94df1e408b5c3095:0xacfb8520bc1a7644!8m2!3d-26.9165792!4d-49.0717331!16zL20vMDJ5Z2h6?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Blumenau, SC
+                    </a>
+
+                    <a class="flex items-center text-sm text-zinc-500 gap-2 mb-4" href="mailto:diego.valgas@gmail.com">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        diego.valgas@gmail.com
+                    </a>
+
+                    <div class="contact-buttons flex flex-wrap gap-2.5 mb-8">
+                        <a class="inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-100 bg-zinc-700 transition-colors hover:bg-zinc-800" href="https://wa.me/5547984247193" target="_blank">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"></path></svg>
+                            WhatsApp
+                        </a>
+
+                        <a class="inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-700 bg-transparent border border-zinc-200 transition-colors hover:bg-zinc-200 hover:border-zinc-400" href="https://www.linkedin.com/in/diego-valgas/" target="_blank">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                            LinkedIn
+                        </a>
+                    </div>
+
+                    <nav class="inline-flex items-center gap-0.5 bg-zinc-200 rounded-md p-1">
+                        <a href="#sobre" class="text-xs font-medium tracking-wide text-zinc-500 py-1.5 px-3 rounded whitespace-nowrap transition-colors hover:bg-zinc-100 hover:text-zinc-700">Sobre</a>
+                        <a href="#tecnologias" class="text-xs font-medium tracking-wide text-zinc-500 py-1.5 px-3 rounded whitespace-nowrap transition-colors hover:bg-zinc-100 hover:text-zinc-700">Stack</a>
+                        <a href="#desafios" class="text-xs font-medium tracking-wide text-zinc-500 py-1.5 px-3 rounded whitespace-nowrap transition-colors hover:bg-zinc-100 hover:text-zinc-700">Desafios</a>
+                        <a href="#projetos" class="text-xs font-medium tracking-wide text-zinc-500 py-1.5 px-3 rounded whitespace-nowrap transition-colors hover:bg-zinc-100 hover:text-zinc-700">Projetos</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section id="sobre" class="py-16">
+            <h2 class="title text-2xl font-bold sm:text-3xl text-zinc-700 mb-5">
+                Antes do código...
+            </h2>
+
+            <p class="text-base leading-relaxed text-zinc-500 mb-4">
+                Nem sempre é fácil descrever uma trajetória de carreira em poucas palavras, especialmente em tecnologia, onde o aprendizado constante apaga fragmentos do que sabemos para abrir espaço a novos conceitos. Isso molda a forma como enxergamos os desafios do dia a dia, sejam pessoais ou resolvidos com código, pois todos exigem olhar além do que está visível.
+            </p>
+
+            <p class="text-base leading-relaxed text-zinc-500 mb-4">
+                Olhar para um problema de outro ângulo é essencial. Isso pode dissipar o nevoeiro que esconde os melhores caminhos e nos impede de enxergar alternativas, forçando-nos a seguir a rota tortuosa da solução mais óbvia. Essa postura nos obriga a nos adaptar constantemente, pois é ao examinar um desafio por diferentes perspectivas que encontramos soluções mais próximas de um resultado realmente definitivo. Foi assim que percebi a importância de desenvolver habilidades além do código, fundamentais para resolver questões complexas com eficácia.
+            </p>
+        </section>
+
+        <section id="tecnologias" class="py-16">
+            <h2 class="title text-2xl font-bold sm:text-3xl text-zinc-700 mb-3">Stack</h2>
+
+            <p class="subtitle text-xs text-zinc-400 mb-9">
+                // Principais tecnologias que já utilizei em projetos.
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg class="w-11 h-7" viewBox="0 -1 100 50"><path fill="currentColor" d="M7.579 10.123h14.204c4.169.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-.247 1.873-.795 3.71-1.643 5.512a16.385 16.385 0 01-3.392 4.876c-1.767 1.837-3.657 3.003-5.671 3.498a26.11 26.11 0 01-6.254.742h-6.36l-2.014 10.07H0l7.579-38.001m6.201 6.042l-3.18 15.9c.212.035.424.053.636.053h.742c3.392.035 6.219-.3 8.48-1.007 2.261-.742 3.781-3.321 4.558-7.738.636-3.71 0-5.848-1.908-6.413-1.873-.565-4.222-.83-7.049-.795-.424.035-.83.053-1.219.053h-1.113l.053-.053M41.093 0h7.314L46.34 10.123h6.572c3.604.071 6.289.813 8.056 2.226 1.802 1.413 2.332 4.099 1.59 8.056l-3.551 17.649h-7.42L54.979 21.2c.353-1.767.247-3.021-.318-3.763s-1.784-1.113-3.657-1.113l-5.883-.053-4.346 21.783h-7.314L41.093 0M70.412 10.123h14.204c4.169.035 7.19 1.237 9.063 3.604 1.873 2.367 2.491 5.6 1.855 9.699-.247 1.873-.795 3.71-1.643 5.512a16.385 16.385 0 01-3.392 4.876c-1.767 1.837-3.657 3.003-5.671 3.498a26.11 26.11 0 01-6.254.742h-6.36L70.2 48.124h-7.367l7.579-38.001m6.201 6.042l-3.18 15.9c.212.035.424.053.636.053h.742c3.392.035 6.219-.3 8.48-1.007 2.261-.742 3.781-3.321 4.558-7.738.636-3.71 0-5.848-1.908-6.413-1.873-.565-4.222-.83-7.049-.795-.424.035-.83.053-1.219.053H76.56l.053-.053"/></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">PHP</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M0 0h24v24H0V0zm22.034 18.276c-.175-1.095-.888-2.015-3.003-2.873-.736-.345-1.554-.585-1.797-1.14-.091-.33-.105-.51-.046-.705.15-.646.915-.84 1.515-.66.39.12.75.42.976.9 1.034-.676 1.034-.676 1.755-1.125-.27-.42-.404-.601-.586-.78-.63-.705-1.469-1.065-2.834-1.034l-.705.089c-.676.165-1.32.525-1.71 1.005-1.14 1.291-.811 3.541.569 4.471 1.365 1.02 3.361 1.244 3.616 2.205.24 1.17-.87 1.545-1.966 1.41-.811-.18-1.26-.586-1.755-1.336l-1.83 1.051c.21.48.45.689.81 1.109 1.74 1.756 6.09 1.666 6.871-1.004.029-.09.24-.705.074-1.65l.046.067zm-8.983-7.245h-2.248c0 1.938-.009 3.864-.009 5.805 0 1.232.063 2.363-.138 2.711-.33.689-1.18.601-1.566.48-.396-.196-.597-.466-.83-.855-.063-.105-.11-.196-.127-.196l-1.825 1.125c.305.63.75 1.172 1.324 1.517.855.51 2.004.675 3.207.405.783-.226 1.458-.691 1.811-1.411.51-.93.402-2.07.397-3.346.012-2.054 0-4.109 0-6.179l.004-.056z"></path></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">JavaScript</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M13.983 11.078h2.119a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.119a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 0 0 .186-.186V3.574a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 0 0 .186-.186V6.29a.186.186 0 0 0-.186-.185h-2.118a.185.185 0 0 0-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 0 0 .184-.186V6.29a.185.185 0 0 0-.185-.185H8.1a.185.185 0 0 0-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 0 0 .185-.186V6.29a.185.185 0 0 0-.185-.185H5.136a.186.186 0 0 0-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 0 0 .186-.185V9.006a.186.186 0 0 0-.186-.186h-2.118a.185.185 0 0 0-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 0 0 .185-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.186.186 0 0 0-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.186.186 0 0 0 .184-.185V9.006a.185.185 0 0 0-.184-.186h-2.12a.185.185 0 0 0-.185.185v1.888c0 .102.083.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 0 0-.75.748 11.376 11.376 0 0 0 .692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 0 0 3.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"></path></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">Docker</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M23.546 10.93L13.067.452c-.604-.603-1.582-.603-2.188 0L8.708 2.627l2.76 2.76c.645-.215 1.379-.07 1.889.441.516.515.658 1.258.438 1.9l2.658 2.66c.645-.223 1.387-.078 1.9.435.721.72.721 1.884 0 2.604-.719.719-1.881.719-2.6 0-.539-.541-.674-1.337-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348.713.721.713 1.883 0 2.6-.719.721-1.889.721-2.609 0-.719-.719-.719-1.879 0-2.598.182-.18.387-.316.605-.406V8.835c-.217-.091-.424-.222-.6-.401-.545-.545-.676-1.342-.396-2.009L7.636 3.67 .45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477c.604.604 1.582.604 2.186 0l10.43-10.43c.605-.603.605-1.582 0-2.187"></path></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">Git</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.565-2.438L1.5 0zm7.031 9.75l-.232-2.718 10.059.003.23-2.622L5.412 4.41l.698 8.01h9.126l-.326 3.426-2.91.804-2.955-.81-.188-2.11H6.248l.33 4.171L12 19.351l5.379-1.443.744-8.157H8.531z"></path></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">HTML</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm17.09 4.413L5.41 4.41l.213 2.622 10.125.002-.255 2.716h-6.64l.24 2.573h6.182l-.366 3.523-2.91.804-2.956-.81-.188-2.11h-2.61l.29 3.855L12 19.288l5.373-1.53L18.59 4.414v-.001z"></path></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">CSS</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.6 25.6" class="w-7 h-7"><path d="M179.076 94.886c-3.568-.1-6.336.268-8.656 1.25-.668.27-1.74.27-1.828 1.116.357.355.4.936.713 1.428.535.893 1.473 2.096 2.32 2.72l2.855 2.053c1.74 1.07 3.703 1.695 5.398 2.766.982.625 1.963 1.428 2.945 2.098.5.357.803.938 1.428 1.16v-.135c-.312-.4-.402-.98-.713-1.428l-1.34-1.293c-1.293-1.74-2.9-3.258-4.64-4.506-1.428-.982-4.55-2.32-5.13-3.97l-.088-.1c.98-.1 2.14-.447 3.078-.715 1.518-.4 2.9-.312 4.46-.713l2.143-.625v-.4c-.803-.803-1.383-1.874-2.23-2.632-2.275-1.963-4.775-3.882-7.363-5.488-1.383-.892-3.168-1.473-4.64-2.23-.537-.268-1.428-.402-1.74-.848-.805-.98-1.25-2.275-1.83-3.436l-3.658-7.763c-.803-1.74-1.295-3.48-2.275-5.086-4.596-7.585-9.594-12.18-17.268-16.687-1.65-.937-3.613-1.34-5.7-1.83l-3.346-.18c-.715-.312-1.428-1.16-2.053-1.562-2.543-1.606-9.102-5.086-10.977-.5-1.205 2.9 1.785 5.755 2.8 7.228.76 1.026 1.74 2.186 2.277 3.346.3.758.4 1.562.713 2.365.713 1.963 1.383 4.15 2.32 5.98.5.937 1.025 1.92 1.65 2.767.357.5.982.714 1.115 1.517-.625.893-.668 2.23-1.025 3.347-1.607 5.042-.982 11.288 1.293 15 .715 1.115 2.4 3.57 4.686 2.632 2.008-.803 1.56-3.346 2.14-5.577.135-.535.045-.892.312-1.25v.1l1.83 3.703c1.383 2.186 3.793 4.462 5.8 5.98 1.07.803 1.918 2.187 3.256 2.677v-.135h-.088c-.268-.4-.67-.58-1.027-.892-.803-.803-1.695-1.785-2.32-2.677-1.873-2.498-3.523-5.265-4.996-8.12-.715-1.383-1.34-2.9-1.918-4.283-.27-.536-.27-1.34-.715-1.606-.67.98-1.65 1.83-2.143 3.034-.848 1.918-.936 4.283-1.248 6.737-.18.045-.1 0-.18.1-1.426-.356-1.918-1.83-2.453-3.078-1.338-3.168-1.562-8.254-.402-11.913.312-.937 1.652-3.882 1.117-4.774-.27-.848-1.16-1.338-1.652-2.008-.58-.848-1.203-1.918-1.605-2.855-1.07-2.5-1.605-5.265-2.766-7.764-.537-1.16-1.473-2.365-2.232-3.435-.848-1.205-1.783-2.053-2.453-3.48-.223-.5-.535-1.294-.178-1.83.088-.357.268-.5.623-.58.58-.5 2.232.134 2.812.4 1.65.67 3.033 1.294 4.416 2.23.625.446 1.295 1.294 2.098 1.518h.938c1.428.312 3.033.1 4.37.5 2.365.76 4.506 1.874 6.426 3.08 5.844 3.703 10.664 8.968 13.92 15.26.535 1.026.758 1.963 1.25 3.034.938 2.187 2.098 4.417 3.033 6.56.938 2.097 1.83 4.24 3.168 5.98.67.937 3.346 1.427 4.55 1.918.893.4 2.275.76 3.08 1.25 1.516.937 3.033 2.008 4.46 3.034.713.534 2.945 1.65 3.078 2.54zm-45.5-38.772a7.09 7.09 0 0 0-1.828.223v.1h.088c.357.714.982 1.205 1.428 1.83l1.027 2.142.088-.1c.625-.446.938-1.16.938-2.23-.268-.312-.312-.625-.535-.937-.268-.446-.848-.67-1.206-1.026z" transform="matrix(.390229 0 0 .38781 -46.300037 -16.856717)" fill-rule="evenodd" fill="currentColor"/></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">MySQL</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4 0 264 264" fill="currentColor" class="w-7 h-7" preserveAspectRatio="xMinYMin meet"><path d="M108.076 81.525c-2.68-.373-5.107-.028-6.335.902-.69.523-.904 1.129-.962 1.546-.154 1.105.62 2.327 1.096 2.957 1.346 1.784 3.312 3.01 5.258 3.28.282.04.563.058.842.058 3.245 0 6.196-2.527 6.456-4.392.325-2.336-3.066-3.893-6.355-4.35M196.86 81.599c-.256-1.831-3.514-2.353-6.606-1.923-3.088.43-6.082 1.824-5.832 3.659.2 1.427 2.777 3.863 5.827 3.863.258 0 .518-.017.78-.054 2.036-.282 3.53-1.575 4.24-2.32 1.08-1.136 1.706-2.402 1.591-3.225"/><path d="M247.802 160.025c-1.134-3.429-4.784-4.532-10.848-3.28-18.005 3.716-24.453 1.142-26.57-.417 13.995-21.32 25.508-47.092 31.719-71.137 2.942-11.39 4.567-21.968 4.7-30.59.147-9.463-1.465-16.417-4.789-20.665-13.402-17.125-33.072-26.311-56.882-26.563-16.369-.184-30.199 4.005-32.88 5.183-5.646-1.404-11.801-2.266-18.502-2.376-12.288-.199-22.91 2.743-31.704 8.74-3.82-1.422-13.692-4.811-25.765-6.756-20.872-3.36-37.458-.814-49.294 7.571-14.123 10.006-20.643 27.892-19.38 53.16.425 8.501 5.269 34.653 12.913 59.698 10.062 32.964 21 51.625 32.508 55.464 1.347.449 2.9.763 4.613.763 4.198 0 9.345-1.892 14.7-8.33a529.832 529.832 0 0 1 20.261-22.926c4.524 2.428 9.494 3.784 14.577 3.92.01.133.023.266.035.398a117.66 117.66 0 0 0-2.57 3.175c-3.522 4.471-4.255 5.402-15.592 7.736-3.225.666-11.79 2.431-11.916 8.435-.136 6.56 10.125 9.315 11.294 9.607 4.074 1.02 7.999 1.523 11.742 1.523 9.103 0 17.114-2.992 23.516-8.781-.197 23.386.778 46.43 3.586 53.451 2.3 5.748 7.918 19.795 25.664 19.794 2.604 0 5.47-.303 8.623-.979 18.521-3.97 26.564-12.156 29.675-30.203 1.665-9.645 4.522-32.676 5.866-45.03 2.836.885 6.487 1.29 10.434 1.289 8.232 0 17.731-1.749 23.688-4.514 6.692-3.108 18.768-10.734 16.578-17.36zm-44.106-83.48c-.061 3.647-.563 6.958-1.095 10.414-.573 3.717-1.165 7.56-1.314 12.225-.147 4.54.42 9.26.968 13.825 1.108 9.22 2.245 18.712-2.156 28.078a36.508 36.508 0 0 1-1.95-4.009c-.547-1.326-1.735-3.456-3.38-6.404-6.399-11.476-21.384-38.35-13.713-49.316 2.285-3.264 8.084-6.62 22.64-4.813zm-17.644-61.787c21.334.471 38.21 8.452 50.158 23.72 9.164 11.711-.927 64.998-30.14 110.969a171.33 171.33 0 0 0-.886-1.117l-.37-.462c7.549-12.467 6.073-24.802 4.759-35.738-.54-4.488-1.05-8.727-.92-12.709.134-4.22.692-7.84 1.232-11.34.663-4.313 1.338-8.776 1.152-14.037.139-.552.195-1.204.122-1.978-.475-5.045-6.235-20.144-17.975-33.81-6.422-7.475-15.787-15.84-28.574-21.482 5.5-1.14 13.021-2.203 21.442-2.016zM66.674 175.778c-5.9 7.094-9.974 5.734-11.314 5.288-8.73-2.912-18.86-21.364-27.791-50.624-7.728-25.318-12.244-50.777-12.602-57.916-1.128-22.578 4.345-38.313 16.268-46.769 19.404-13.76 51.306-5.524 64.125-1.347-.184.182-.376.352-.558.537-21.036 21.244-20.537 57.54-20.485 59.759-.002.856.07 2.068.168 3.735.362 6.105 1.036 17.467-.764 30.334-1.672 11.957 2.014 23.66 10.111 32.109a36.275 36.275 0 0 0 2.617 2.468c-3.604 3.86-11.437 12.396-19.775 22.426zm22.479-29.993c-6.526-6.81-9.49-16.282-8.133-25.99 1.9-13.592 1.199-25.43.822-31.79-.053-.89-.1-1.67-.127-2.285 3.073-2.725 17.314-10.355 27.47-8.028 4.634 1.061 7.458 4.217 8.632 9.645 6.076 28.103.804 39.816-3.432 49.229-.873 1.939-1.698 3.772-2.402 5.668l-.546 1.466c-1.382 3.706-2.668 7.152-3.465 10.424-6.938-.02-13.687-2.984-18.819-8.34zm1.065 37.9c-2.026-.506-3.848-1.385-4.917-2.114.893-.42 2.482-.992 5.238-1.56 13.337-2.745 15.397-4.683 19.895-10.394 1.031-1.31 2.2-2.794 3.819-4.602l.002-.002c2.411-2.7 3.514-2.242 5.514-1.412 1.621.67 3.2 2.702 3.84 4.938.303 1.056.643 3.06-.47 4.62-9.396 13.156-23.088 12.987-32.921 10.526zm69.799 64.952c-16.316 3.496-22.093-4.829-25.9-14.346-2.457-6.144-3.665-33.85-2.808-64.447.011-.407-.047-.8-.159-1.17a15.444 15.444 0 0 0-.456-2.162c-1.274-4.452-4.379-8.176-8.104-9.72-1.48-.613-4.196-1.738-7.46-.903.696-2.868 1.903-6.107 3.212-9.614l.549-1.475c.618-1.663 1.394-3.386 2.214-5.21 4.433-9.848 10.504-23.337 3.915-53.81-2.468-11.414-10.71-16.988-23.204-15.693-7.49.775-14.343 3.797-17.761 5.53-.735.372-1.407.732-2.035 1.082.954-11.5 4.558-32.992 18.04-46.59 8.489-8.56 19.794-12.788 33.568-12.56 27.14.444 44.544 14.372 54.366 25.979 8.464 10.001 13.047 20.076 14.876 25.51-13.755-1.399-23.11 1.316-27.852 8.096-10.317 14.748 5.644 43.372 13.315 57.129 1.407 2.521 2.621 4.7 3.003 5.626 2.498 6.054 5.732 10.096 8.093 13.046.724.904 1.426 1.781 1.96 2.547-4.166 1.201-11.649 3.976-10.967 17.847-.55 6.96-4.461 39.546-6.448 51.059-2.623 15.21-8.22 20.875-23.957 24.25zm68.104-77.936c-4.26 1.977-11.389 3.46-18.161 3.779-7.48.35-11.288-.838-12.184-1.569-.42-8.644 2.797-9.547 6.202-10.503.535-.15 1.057-.297 1.561-.473.313.255.656.508 1.032.756 6.012 3.968 16.735 4.396 31.874 1.271l.166-.033c-2.042 1.909-5.536 4.471-10.49 6.772z"/></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">PostgreSQL</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-7 h-7" fill="currentColor"><path d="M31.99 19.12c-0.010 0.307-0.417 0.646-1.245 1.078-1.708 0.891-10.552 4.531-12.438 5.51-1.885 0.984-2.927 0.974-4.417 0.26-1.49-0.708-10.901-4.516-12.599-5.323-0.844-0.406-1.276-0.745-1.292-1.068v3.234c0 0.323 0.448 0.661 1.292 1.068 1.698 0.813 11.115 4.615 12.599 5.323 1.49 0.714 2.531 0.724 4.417-0.26 1.885-0.979 10.729-4.62 12.438-5.51 0.87-0.448 1.255-0.802 1.255-1.12 0-0.302 0-3.188 0-3.188 0-0.005-0.005-0.005-0.010-0.005zM31.99 13.849c-0.016 0.302-0.417 0.641-1.245 1.078-1.708 0.885-10.552 4.526-12.438 5.505-1.885 0.984-2.927 0.974-4.417 0.266-1.49-0.714-10.901-4.516-12.599-5.328-0.844-0.401-1.276-0.745-1.292-1.068v3.234c0 0.323 0.448 0.667 1.292 1.068 1.698 0.813 11.109 4.615 12.599 5.328 1.49 0.708 2.531 0.719 4.417-0.26 1.885-0.984 10.729-4.62 12.438-5.51 0.87-0.453 1.255-0.807 1.255-1.125 0-0.302 0-3.188 0-3.188s-0.005 0-0.010 0zM31.99 8.375c0.016-0.323-0.406-0.609-1.266-0.922-1.661-0.609-10.458-4.109-12.141-4.729-1.682-0.615-2.37-0.589-4.349 0.12-1.979 0.714-11.339 4.385-13.005 5.036-0.833 0.328-1.24 0.63-1.224 0.953v3.234c0 0.323 0.443 0.661 1.292 1.068 1.693 0.813 11.109 4.615 12.599 5.328 1.484 0.708 2.531 0.719 4.417-0.266 1.88-0.979 10.729-4.62 12.438-5.505 0.865-0.453 1.25-0.807 1.25-1.125 0-0.302 0-3.193 0-3.193zM11.458 11.438l7.417-1.135-2.24 3.281zM27.859 8.479l-4.859 1.922-4.385-1.734 4.854-1.917zM14.984 5.302l-0.719-1.323 2.24 0.875 2.109-0.688-0.573 1.365 2.151 0.807-2.771 0.286-0.625 1.495-1-1.667-3.203-0.286zM9.458 7.172c2.193 0 3.964 0.688 3.964 1.531 0 0.849-1.776 1.536-3.964 1.536s-3.964-0.688-3.964-1.536c0-0.844 1.776-1.531 3.964-1.531z"/></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">Redis</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383 c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076 c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0 L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392 c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021 c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921 c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603 v10.15c0,0.659-0.354,1.275-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993 c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233 c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081 c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833 c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402 c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253 c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"></path></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">Node.js</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><path d="M24,1.61H14.06L12,5.16,9.94,1.61H0L12,22.39ZM12,14.08,5.16,2.23H9.59L12,6.41l2.41-4.18h4.43Z"></path></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">Vue.js</span>
+                </div>
+
+                <div class="flex flex-col items-start gap-2.5 p-4 bg-zinc-200 rounded-md cursor-default transition-colors">
+                    <div class="text-zinc-500">
+                        <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7"><title>Claude</title><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>
+                    </div>
+
+                    <span class="subtitle text-xs text-zinc-700 font-medium">Claude</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="desafios" class="py-16">
+            <h2 class="title text-2xl font-bold sm:text-3xl text-zinc-700 mb-3">Desafios</h2>
+
+            <p class="subtitle text-xs text-zinc-400 mb-9">
+                // Alguns dos desafios técnicos superados ao longo da carreira.
+            </p>
+
+            <div class="relative pl-7">
+                <div class="absolute left-[11px] top-3 bottom-3 w-px bg-zinc-200"></div>
+
+                <div class="relative flex items-start gap-5 pb-8">
+                    <div class="absolute -left-7 top-2.5 w-[22px] h-[22px] bg-zinc-100 flex items-center justify-center text-zinc-500 shrink-0">
+                        <svg width="18" height="18" fill="currentColor" role="img" viewBox="0 0 24 24"><title>CodeCrafters</title><path d="M9.825 17.527a.111.111 0 0 1-.107-.142l3.05-10.837a.111.111 0 0 1 .108-.081H14.2c.074 0 .127.07.107.141l-3.063 10.838a.111.111 0 0 1-.107.08H9.825Zm-2.146-2.732a.11.11 0 0 1-.079-.033l-2.667-2.704a.111.111 0 0 1 0-.156L7.6 9.211a.111.111 0 0 1 .08-.033h1.702c.1 0 .149.12.079.19l-2.534 2.534a.111.111 0 0 0 0 .157l2.535 2.546c.07.07.02.19-.079.19H7.68Zm6.954 0a.111.111 0 0 1-.079-.19l2.525-2.546a.111.111 0 0 0 0-.157l-2.524-2.535a.111.111 0 0 1 .079-.19h1.692c.03 0 .058.013.078.034l2.68 2.69a.111.111 0 0 1 0 .157l-2.68 2.704a.111.111 0 0 1-.078.033h-1.693ZM12 24C5.383 24 0 18.617 0 12S5.383 0 12 0s12 5.383 12 12-5.383 12-12 12Zm0-22.667C6.118 1.333 1.333 6.118 1.333 12S6.118 22.667 12 22.667 22.667 17.882 22.667 12 17.882 1.333 12 1.333Z"/></svg>
+                    </div>
+
+                    <div>
+                        <p class="title font-semibold text-sm text-zinc-700 mb-1.5 leading-snug">
+                            O código
+                        </p>
+                        <p class="text-sm leading-relaxed text-zinc-500">
+                            Quando criança, você aprendeu seu idioma na escola: cada letra do alfabeto, cada regra gramatical, praticou a escrita à mão, tudo para se comunicar com as pessoas. Agora, você terá que passar por tudo isso novamente, mas desta vez para conversar com as máquinas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex items-start gap-5 pb-8">
+                    <div class="absolute -left-7 top-2.5 w-[22px] h-[22px] bg-zinc-100 flex items-center justify-center text-zinc-500 shrink-0">
+                        <svg width="22" height="22" fill="currentColor" role="img" viewBox="0 0 24 24"><title>database-outline</title><path fill="currentColor" d="M12 20q-3.506 0-5.753-.893T4 16.807V7q0-1.246 2.34-2.123T12 4t5.66.877T20 7v9.808q0 1.405-2.247 2.299T12 20m0-11.11q2.148 0 4.33-.599q2.184-.599 2.612-1.305q-.41-.744-2.57-1.365T12 5q-2.179 0-4.366.599t-2.615 1.31q.408.75 2.576 1.366T12 8.891m0 5.032q1.03 0 2.025-.1t1.901-.297t1.685-.491T19 12.37V8.275q-.611.37-1.39.664q-.777.294-1.684.49q-.907.198-1.901.298t-2.025.1q-1.07 0-2.079-.11t-1.906-.306t-1.663-.482T5 8.275v4.096q.587.37 1.352.654t1.663.482q.896.197 1.906.307t2.079.109M12 19q1.285 0 2.443-.146t2.082-.414t1.57-.641t.905-.805v-3.623q-.611.37-1.39.664q-.777.294-1.684.491t-1.901.297t-2.025.1q-1.07 0-2.079-.11t-1.906-.306t-1.663-.482q-.766-.284-1.352-.654V17q.26.452.903.812t1.566.627t2.085.415T12 19"/></svg>
+                    </div>
+
+                    <div>
+                        <p class="title font-semibold text-sm text-zinc-700 mb-1.5 leading-snug">
+                            Dados
+                        </p>
+                        <p class="text-sm leading-relaxed text-zinc-500">
+                            Quando o quarto está uma bagunça, encontrar o que você precisa pode levar mais tempo, isso se você conseguir encontrar o que procura. O mesmo acontece com os dados, onde o desafio está em garantir que as coisas sejam colocadas no lugar certo desde o início. Afinal, você não precisa arrumar o quarto se ele não estiver bagunçado.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex items-start gap-5 pb-8">
+                    <div class="absolute -left-7 top-2.5 w-[22px] h-[22px] bg-zinc-100 flex items-center justify-center text-zinc-500 shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 32 32"><title>api</title><path fill="currentColor" d="M26 22a3.86 3.86 0 0 0-2 .57l-3.09-3.1a6 6 0 0 0 0-6.94L24 9.43a3.86 3.86 0 0 0 2 .57a4 4 0 1 0-4-4a3.86 3.86 0 0 0 .57 2l-3.1 3.09a6 6 0 0 0-6.94 0L9.43 8A3.86 3.86 0 0 0 10 6a4 4 0 1 0-4 4a3.86 3.86 0 0 0 2-.57l3.09 3.1a6 6 0 0 0 0 6.94L8 22.57A3.86 3.86 0 0 0 6 22a4 4 0 1 0 4 4a3.86 3.86 0 0 0-.57-2l3.1-3.09a6 6 0 0 0 6.94 0l3.1 3.09a3.86 3.86 0 0 0-.57 2a4 4 0 1 0 4-4m0-18a2 2 0 1 1-2 2a2 2 0 0 1 2-2M4 6a2 2 0 1 1 2 2a2 2 0 0 1-2-2m2 22a2 2 0 1 1 2-2a2 2 0 0 1-2 2m10-8a4 4 0 1 1 4-4a4 4 0 0 1-4 4m10 8a2 2 0 1 1 2-2a2 2 0 0 1-2 2"/></svg>
+                    </div>
+                    <div>
+                        <p class="title font-semibold text-sm text-zinc-700 mb-1.5 leading-snug">
+                            API
+                        </p>
+                        <p class="text-sm leading-relaxed text-zinc-500">
+                            Comunicar-se com outros sistemas pode ser desafiador mesmo após muita experiência. Consumir serviços de APIs problemáticas e com documentação confusa é como estar perdido em um lugar onde as pessoas não falam o seu idioma.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex items-start gap-5 pb-8">
+                    <div class="absolute -left-7 top-2.5 w-[22px] h-[22px] bg-zinc-100 flex items-center justify-center text-zinc-500 shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><title>structure</title><path fill="currentColor" fill-rule="evenodd" d="M4.25 8.675A3.751 3.751 0 1 1 8.675 4.25h6.65a3.751 3.751 0 1 1 4.425 4.425v6.65a3.751 3.751 0 1 1-4.425 4.425h-6.65a3.751 3.751 0 1 1-4.425-4.425zM2.75 5a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0m3 10.325v-6.65A3.75 3.75 0 0 0 8.675 5.75h6.65a3.76 3.76 0 0 0 2.925 2.925v6.65a3.76 3.76 0 0 0-2.925 2.925h-6.65a3.76 3.76 0 0 0-2.925-2.925M5 16.75a2.25 2.25 0 1 0 0 4.5a2.25 2.25 0 0 0 0-4.5M21.25 5a2.25 2.25 0 1 1-4.5 0a2.25 2.25 0 0 1 4.5 0m-4.5 14a2.25 2.25 0 1 1 4.5 0a2.25 2.25 0 0 1-4.5 0" clip-rule="evenodd"/></svg>
+                    </div>
+                    <div>
+                        <p class="title font-semibold text-sm text-zinc-700 mb-1.5 leading-snug">
+                            Estrutura
+                        </p>
+                        <p class="text-sm leading-relaxed text-zinc-500">
+                            O problema é parecido com o do quarto bagunçado: organização é essencial. Mas aqui estamos falando da estrutura de um sistema, onde uma boa arquitetura facilita a manutenção e o crescimento do software. Você aprendeu a escrever em um novo idioma; agora, é decidir onde cada assunto será escrito.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative flex items-start gap-5 pb-8">
+                    <div class="absolute -left-7 top-2.5 w-[22px] h-[22px] bg-zinc-100 flex items-center justify-center text-zinc-500 shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><title>secure-outline</title><path fill="currentColor" d="M12 17a2 2 0 0 1-2-2c0-1.11.89-2 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2m6 3V10H6v10zm0-12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V10c0-1.11.89-2 2-2h1V6a5 5 0 0 1 5-5a5 5 0 0 1 5 5v2zm-6-5a3 3 0 0 0-3 3v2h6V6a3 3 0 0 0-3-3"/></svg>
+                    </div>
+                    <div>
+                        <p class="title font-semibold text-sm text-zinc-700 mb-1.5 leading-snug">
+                            Segurança
+                        </p>
+                        <p class="text-sm leading-relaxed text-zinc-500">
+                            Colocar um cadeado na porta não vai impedir que invadam sua casa, pois você pode ter deixado uma janela aberta. Proteger-se também é uma necessidade em sistemas, e o desafio é que, nesse caso, diferente da porta da sua casa, o mundo inteiro tem acesso às portas que dão acesso ao seu sistema.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="py-16">
+            <h2 class="title text-2xl font-bold sm:text-3xl text-zinc-700 mb-3">Projetos</h2>
+
+            <p class="subtitle text-xs text-zinc-400 mb-9">
+                // Alguns dos projetos desenvolvidos.
+            </p>
+
+            <div class="flex flex-col gap-16 md:gap-12">
+                <div class="project-row grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+                    <a href="https://lancaster.com.br/" target="_blank">
+                        <div class="aspect-[4/3] rounded-md overflow-hidden bg-zinc-200">
+                            <img alt="Plataforma de Gestão Financeira"
+                                src="./images/estampoteca.png"
+                                class="w-full h-full object-cover transition-transform duration-[400ms]">
+                        </div>
+                    </a>
+                    <div>
+                        <div class="flex items-center gap-2.5 mb-3.5">
+                            <span class="subtitle text-xs text-zinc-400">2021</span>
+                        </div>
+
+                        <h3 class="title font-bold text-lg text-zinc-700 leading-snug mb-3">
+                            Estampoteca
+                        </h3>
+
+                        <p class="text-sm leading-relaxed text-zinc-500 mb-[18px]">
+                            A Estampoteca é o acervo digital de estampas da Lancaster, onde os clientes podem visualizar todas as opções disponíveis, personalizar cores e elementos para criar padrões exclusivos e até solicitar amostras diretamente pelo sistema.
+                        </p>
+
+                        <div class="flex gap-1.5 flex-wrap">
+                            <span class="subtitle text-xs text-zinc-500 bg-zinc-200 py-1 px-2 rounded">Laravel</span>
+                            <span class="subtitle text-xs text-zinc-500 bg-zinc-200 py-1 px-2 rounded">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-row grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+                    <a class="md:order-2" href="https://www.circulo.com.br/" target="_blank">
+                        <div class="aspect-[4/3] rounded-md overflow-hidden bg-zinc-200">
+                            <img alt="API de Integração Fiscal"
+                                src="./images/circulo.png"
+                                class="w-full h-full object-cover transition-transform duration-[400ms]">
+                        </div>
+                    </a>
+                    <div class="md:order-1">
+                        <div class="flex items-center gap-2.5 mb-3.5">
+                            <span class="subtitle text-xs text-zinc-400">2022</span>
+                        </div>
+
+                        <h3 class="title font-bold text-lg text-zinc-700 leading-snug mb-3">
+                            Círculo
+                        </h3>
+
+                        <p class="text-sm leading-relaxed text-zinc-500 mb-[18px]">
+                            A Círculo é uma tradicional marca brasileira de fios e linhas para crochê, tricô e bordado, que oferece produtos inovadores e de alta qualidade para artesãos no Brasil e no exterior. Além disso, disponibiliza gratuitamente em seu site receitas, dicas, tendências e conteúdos em um blog para inspirar e auxiliar quem cria peças artesanais.
+                        </p>
+
+                        <div class="flex gap-1.5 flex-wrap">
+                            <span class="subtitle text-xs text-zinc-500 bg-zinc-200 py-1 px-2 rounded">Laravel</span>
+                            <span class="subtitle text-xs text-zinc-500 bg-zinc-200 py-1 px-2 rounded">JavaScript</span>
+                            <span class="subtitle text-xs text-zinc-500 bg-zinc-200 py-1 px-2 rounded">AWS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-row grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center">
+                    <a href="https://boobam.com.br/" target="_blank">
+                        <div class="aspect-[4/3] rounded-md overflow-hidden bg-zinc-200">
+                            <img alt="Dashboard de Analytics"
+                                src="./images/boobam.png"
+                                class="w-full h-full object-cover transition-transform duration-[400ms]">
+                        </div>
+                    </a>
+                    <div>
+                        <div class="flex items-center gap-2.5 mb-3.5">
+                            <span class="subtitle text-xs text-zinc-400">2023</span>
+                        </div>
+
+                        <h3 class="title font-bold text-lg text-zinc-700 leading-snug mb-3">
+                            Boobam
+                        </h3>
+
+                        <p class="text-sm leading-relaxed text-zinc-500 mb-[18px]">
+                            A Boobam é uma plataforma brasileira com curadoria de peças de designers, artistas e arquitetos, que conecta esses criadores diretamente a quem admira e compra design autoral. Ela oferece mobiliário, objetos e soluções personalizadas para ambientes, com um consultor que acompanha o cliente da escolha ao pós-venda.
+                        </p>
+
+                        <div class="flex gap-1.5 flex-wrap">
+                            <span class="subtitle text-xs text-zinc-500 bg-zinc-200 py-1 px-2 rounded">PHP</span>
+                            <span class="subtitle text-xs text-zinc-500 bg-zinc-200 py-1 px-2 rounded">Javascript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-zinc-700 text-zinc-100">
+        <div class="container mx-auto w-full max-w-4xl px-6 lg:px-10 py-14">
+            <div class="grid md:grid-cols-3 gap-10">
+                <div>
+                    <p class="subtitle text-xs text-zinc-500 mb-3">CONTATO</p>
+                    <p class="title font-bold text-2xl text-zinc-100 mb-2">Diego Valgas</p>
+                    <a class="subtitle text-sm text-zinc-400" href="mailto:diego.valgas@gmail.com">
+                        diego.valgas@gmail.com
+                    </a>
+                </div>
+
+                <div>
+                    <p class="subtitle text-xs text-zinc-500 mb-3">LOCALIZAÇÃO</p>
+                    <a class="text-sm text-zinc-400 leading-relaxed" href="https://www.google.com/maps/place/Blumenau,+SC/@-26.8560081,-49.2639115,11z/data=!3m1!4b1!4m6!3m5!1s0x94df1e408b5c3095:0xacfb8520bc1a7644!8m2!3d-26.9165792!4d-49.0717331!16zL20vMDJ5Z2h6?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                        Blumenau, SC<br>Brasil
+                    </a>
+                </div>
+
+                <div>
+                    <p class="subtitle text-xs text-zinc-500 mb-3.5">LINKS</p>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="https://github.com/DiegoValgas" class="text-sm text-zinc-400 no-underline transition-colors" target="_blank">
+                            GitHub →
+                        </a>
+                        <a href="https://www.linkedin.com/in/diego-valgas/" class="text-sm text-zinc-400 no-underline transition-colors" target="_blank">
+                            LinkedIn →
+                        </a>
+                        <a href="https://wa.me/5547984247193" class="text-sm text-zinc-400 no-underline transition-colors" target="_blank">
+                            WhatsApp →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-5 border-t border-zinc-600 flex justify-between items-center flex-wrap gap-2">
+                <p class="subtitle text-xs text-zinc-500">
+                    © 2026 Diego Valgas. Desenvolvedor PHP Full Stack.
+                </p>
+
+                <p class="subtitle text-xs text-zinc-600">
+                    &lt;made with code /&gt;
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
