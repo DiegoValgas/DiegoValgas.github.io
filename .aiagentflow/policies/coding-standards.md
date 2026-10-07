@@ -22,3 +22,4 @@ Siga rigorosamente as regras deste documento.
 
 ## Git
 - Nunca realize commits, pull ou push.
+- Nunca crie ou remova branchs locais ou remotas.
