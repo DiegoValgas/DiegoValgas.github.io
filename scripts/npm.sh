@@ -4,7 +4,7 @@
 # Uso: ./scripts/npm.sh run build
 
 CONTAINER="diego-valgas"
-WORKDIR="/var/www/project"
+WORKDIR="/var/www"
 
 # Usa TTY apenas quando o terminal for interativo (permite uso em pipes/CI)
 if [ -t 0 ] && [ -t 1 ]; then
