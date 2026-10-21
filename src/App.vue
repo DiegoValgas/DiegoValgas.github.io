@@ -3,6 +3,10 @@ import { ref } from 'vue'
 import TechnologyCard from './components/TechnologyCard.vue'
 import ChallengeItem from './components/ChallengeItem.vue'
 import ProjectItem from './components/ProjectItem.vue'
+import ContentSection from './components/ContentSection.vue'
+import SectionTitle from './components/SectionTitle.vue'
+import SectionParagraph from './components/SectionParagraph.vue'
+import SectionSubtitle from './components/SectionSubtitle.vue'
 import avatarImage from './assets/images/avatar.jpeg'
 import boobamImage from './assets/images/boobam.png'
 import circuloImage from './assets/images/circulo.png'
@@ -89,63 +93,63 @@ const projects = ref([{ "href": "https://boobam.com.br/", "image": boobamImage, 
       </div>
     </header>
 
-    <section id="sobre" class="py-8 md:py-10 lg:py-16">
-      <h2 class="title text-2xl font-bold sm:text-3xl text-zinc-700 mb-5">
+    <ContentSection id="sobre">
+      <SectionTitle class="mb-5">
         Antes do código...
-      </h2>
+      </SectionTitle>
 
-      <p class="text-base text-xs md:text-sm text-justify leading-relaxed text-zinc-500 mb-4">
+      <SectionParagraph class="mb-4">
         Nem sempre é fácil descrever uma trajetória de carreira em poucas palavras, especialmente em tecnologia, onde o
         aprendizado constante apaga fragmentos do que sabemos para abrir espaço a novos conceitos. Isso molda a forma
         como enxergamos os desafios do dia a dia, sejam pessoais ou resolvidos com código, pois todos exigem olhar além
         do que está visível.
-      </p>
+      </SectionParagraph>
 
-      <p class="text-base text-xs md:text-sm text-justify leading-relaxed text-zinc-500">
+      <SectionParagraph>
         Olhar para um problema de outro ângulo é essencial. Isso pode dissipar o nevoeiro que esconde os melhores
         caminhos e nos impede de enxergar alternativas, forçando-nos a seguir a rota tortuosa da solução mais óbvia.
         Essa postura nos obriga a nos adaptar constantemente, pois é ao examinar um desafio por diferentes perspectivas
         que encontramos soluções mais próximas de um resultado realmente definitivo. Foi assim que percebi a importância
         de desenvolver habilidades além do código, fundamentais para resolver questões complexas com eficácia.
-      </p>
-    </section>
+      </SectionParagraph>
+    </ContentSection>
 
-    <section id="tecnologias" class="py-8 md:py-10 lg:py-16">
-      <h2 class="title text-2xl font-bold sm:text-3xl text-zinc-700 mb-3">Stack</h2>
+    <ContentSection id="tecnologias">
+      <SectionTitle class="mb-3">Stack</SectionTitle>
 
-      <p class="subtitle text-xs text-zinc-400 mb-9">
+      <SectionSubtitle class="mb-9">
         // Principais tecnologias que já utilizei em projetos.
-      </p>
+      </SectionSubtitle>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         <TechnologyCard v-for="technology in technologies" :key="technology.name" :technology="technology" />
       </div>
-    </section>
+    </ContentSection>
 
-    <section id="desafios" class="py-8 md:py-10 lg:py-16">
-      <h2 class="title text-2xl font-bold sm:text-3xl text-zinc-700 mb-3">Desafios</h2>
+    <ContentSection id="desafios">
+      <SectionTitle class="mb-3">Desafios</SectionTitle>
 
-      <p class="subtitle text-xs text-zinc-400 mb-9">
+      <SectionSubtitle class="mb-9">
         // Alguns dos desafios técnicos superados ao longo da carreira.
-      </p>
+      </SectionSubtitle>
 
       <div class="relative pl-7">
         <div class="absolute left-[11px] top-3 bottom-3 w-px bg-zinc-200"></div>
         <ChallengeItem v-for="challenge in challenges" :key="challenge.title" :challenge="challenge" />
       </div>
-    </section>
+    </ContentSection>
 
-    <section id="projetos" class="py-8 md:py-10 lg:py-16">
-      <h2 class="title text-2xl font-bold sm:text-3xl text-zinc-700 mb-3">Projetos</h2>
+    <ContentSection id="projetos">
+      <SectionTitle class="mb-3">Projetos</SectionTitle>
 
-      <p class="subtitle text-xs text-zinc-400 mb-9">
+      <SectionSubtitle class="mb-9">
         // Projetos que ajudei a construir.
-      </p>
+      </SectionSubtitle>
 
       <div class="flex flex-col gap-10 md:gap-12">
         <ProjectItem v-for="project in projects" :key="project.name" :project="project" />
       </div>
-    </section>
+    </ContentSection>
   </main>
   <footer class="bg-zinc-700 text-zinc-100">
     <div class="container mx-auto w-full max-w-4xl px-6 lg:px-10 py-14">
