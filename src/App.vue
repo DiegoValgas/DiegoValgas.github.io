@@ -1,57 +1,18 @@
 <script setup>
-import { ref } from 'vue'
-import TechnologyCard from './components/TechnologyCard.vue'
-import ChallengeItem from './components/ChallengeItem.vue'
-import ProjectItem from './components/ProjectItem.vue'
+import TechnologySection from './components/TechnologySection.vue'
+import ChallengeSection from './components/ChallengeSection.vue'
+import ProjectSection from './components/ProjectSection.vue'
 import ContentSection from './components/ContentSection.vue'
 import SectionTitle from './components/SectionTitle.vue'
 import SectionParagraph from './components/SectionParagraph.vue'
 import SectionSubtitle from './components/SectionSubtitle.vue'
 import avatarImage from './assets/images/avatar.jpeg'
-import boobamImage from './assets/images/boobam.png'
-import circuloImage from './assets/images/circulo.png'
-import estampotecaImage from './assets/images/estampoteca.png'
 import LocationIcon from './components/icons/LocationIcon.vue'
 import EmailIcon from './components/icons/EmailIcon.vue'
 import WhatsAppIcon from './components/icons/WhatsAppIcon.vue'
 import LinkedInIcon from './components/icons/LinkedInIcon.vue'
-import PHPIcon from './components/icons/PHPIcon.vue'
-import JavaScriptIcon from './components/icons/JavaScriptIcon.vue'
-import DockerIcon from './components/icons/DockerIcon.vue'
-import GitIcon from './components/icons/GitIcon.vue'
-import HTMLIcon from './components/icons/HTMLIcon.vue'
-import CSSIcon from './components/icons/CSSIcon.vue'
-import MySQLIcon from './components/icons/MySQLIcon.vue'
-import PostgreSQLIcon from './components/icons/PostgreSQLIcon.vue'
-import RedisIcon from './components/icons/RedisIcon.vue'
-import NodeJSIcon from './components/icons/NodeJSIcon.vue'
-import VueIcon from './components/icons/VueIcon.vue'
-import ClaudeIcon from './components/icons/ClaudeIcon.vue'
-import CodeCraftersIcon from './components/icons/CodeCraftersIcon.vue'
-import DatabaseIcon from './components/icons/DatabaseIcon.vue'
-import APIIcon from './components/icons/APIIcon.vue'
-import StructureIcon from './components/icons/StructureIcon.vue'
-import SecurityIcon from './components/icons/SecurityIcon.vue'
-const navigation = ref([{ href: '#sobre', label: 'Sobre' }, { href: '#tecnologias', label: 'Stack' }, { href: '#desafios', label: 'Desafios' }, { href: '#projetos', label: 'Projetos' }])
-const contacts = ref([{ label: 'WhatsApp', href: 'https://wa.me/5547984247193', class: 'inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-100 bg-zinc-700 transition-colors hover:bg-zinc-800', icon: WhatsAppIcon }, { label: 'LinkedIn', href: 'https://www.linkedin.com/in/diego-valgas/', class: 'inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-700 bg-transparent border border-zinc-200 transition-colors hover:bg-zinc-200 hover:border-zinc-400', icon: LinkedInIcon }])
-const technologies = ref([{ name: 'PHP', icon: PHPIcon },
-{ name: 'JavaScript', icon: JavaScriptIcon },
-{ name: 'Docker', icon: DockerIcon },
-{ name: 'Git', icon: GitIcon },
-{ name: 'HTML', icon: HTMLIcon },
-{ name: 'CSS', icon: CSSIcon },
-{ name: 'MySQL', icon: MySQLIcon },
-{ name: 'PostgreSQL', icon: PostgreSQLIcon },
-{ name: 'Redis', icon: RedisIcon },
-{ name: 'Node.js', icon: NodeJSIcon },
-{ name: 'Vue.js', icon: VueIcon },
-{ name: 'Claude', icon: ClaudeIcon }])
-const challenges = ref([{ title: 'O código', description: 'Quando criança, você aprendeu seu idioma na escola: cada letra do alfabeto, cada regra gramatical, praticou a escrita à mão, tudo para se comunicar com as pessoas. Agora, você terá que passar por tudo isso novamente, mas desta vez para conversar com as máquinas.', icon: CodeCraftersIcon },
-{ title: 'Dados', description: 'Quando o quarto está uma bagunça, encontrar o que você precisa pode levar mais tempo, isso se você conseguir encontrar o que procura. O mesmo acontece com os dados, onde o desafio está em garantir que as coisas sejam colocadas no lugar certo desde o início. Afinal, você não precisa arrumar o quarto se ele não estiver bagunçado.', icon: DatabaseIcon },
-{ title: 'API', description: 'Comunicar-se com outros sistemas pode ser desafiador mesmo após muita experiência. Consumir serviços de APIs problemáticas e com documentação confusa é como estar perdido em um lugar onde as pessoas não falam o seu idioma.', icon: APIIcon },
-{ title: 'Estrutura', description: 'O problema é parecido com o do quarto bagunçado: organização é essencial. Mas aqui estamos falando da estrutura de um sistema, onde uma boa arquitetura facilita a manutenção e o crescimento do software. Você aprendeu a escrever em um novo idioma; agora, é decidir onde cada assunto será escrito.', icon: StructureIcon },
-{ title: 'Segurança', description: 'Colocar um cadeado na porta não vai impedir que invadam sua casa, pois você pode ter deixado uma janela aberta. Proteger-se também é uma necessidade em sistemas, e o desafio é que, nesse caso, diferente da porta da sua casa, o mundo inteiro tem acesso às portas que dão acesso ao seu sistema.', icon: SecurityIcon }])
-const projects = ref([{ "href": "https://boobam.com.br/", "image": boobamImage, "alt": "Boobam - Plataforma brasileira com curadoria de peças de designers, artistas e arquitetos", "imageClass": "w-full h-full object-cover transition-transform duration-[400ms]", "linkClass": "", "infoClass": "", "year": "2023", "name": "Boobam", "description": "A Boobam é uma plataforma brasileira com curadoria de peças de designers, artistas e arquitetos, que conecta esses criadores diretamente a quem admira e compra design autoral. Ela oferece mobiliário, objetos e soluções personalizadas para ambientes, com um consultor que acompanha o cliente da escolha ao pós-venda.", "technologies": ["PHP", "Javascript"] }, { "href": "https://www.circulo.com.br/", "image": circuloImage, "alt": "Circulo - Tradicional marca brasileira de fios e linhas", "imageClass": "w-full h-full object-cover transition-transform duration-[400ms]", "linkClass": "md:order-2", "infoClass": "md:order-1", "year": "2022", "name": "Círculo", "description": "A Círculo é uma tradicional marca brasileira de fios e linhas para crochê, tricô e bordado, que oferece produtos inovadores e de alta qualidade para artesãos no Brasil e no exterior. Além disso, disponibiliza gratuitamente em seu site receitas, dicas, tendências e conteúdos em um blog para inspirar e auxiliar quem cria peças artesanais.", "technologies": ["Laravel", "JavaScript", "AWS"] }, { "href": "https://lancaster.com.br/", "image": estampotecaImage, "alt": "Lancaster - Estampoteca - Plataforma de Gestão de Estampas", "imageClass": "w-full h-full object-cover transition-transform duration-[400ms]", "linkClass": "", "infoClass": "", "year": "2021", "name": "Estampoteca", "description": "A Estampoteca é o acervo digital de estampas da Lancaster, onde os clientes podem visualizar todas as opções disponíveis, personalizar cores e elementos para criar padrões exclusivos e até solicitar amostras diretamente pelo sistema.", "technologies": ["Laravel", "JavaScript"] }])
+const navigation = [{ href: '#sobre', label: 'Sobre' }, { href: '#tecnologias', label: 'Stack' }, { href: '#desafios', label: 'Desafios' }, { href: '#projetos', label: 'Projetos' }]
+const contacts = [{ label: 'WhatsApp', href: 'https://wa.me/5547984247193', class: 'inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-100 bg-zinc-700 transition-colors hover:bg-zinc-800', icon: WhatsAppIcon }, { label: 'LinkedIn', href: 'https://www.linkedin.com/in/diego-valgas/', class: 'inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-700 bg-transparent border border-zinc-200 transition-colors hover:bg-zinc-200 hover:border-zinc-400', icon: LinkedInIcon }]
 </script>
 
 <template>
@@ -121,9 +82,7 @@ const projects = ref([{ "href": "https://boobam.com.br/", "image": boobamImage, 
         // Principais tecnologias que já utilizei em projetos.
       </SectionSubtitle>
 
-      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-        <TechnologyCard v-for="technology in technologies" :key="technology.name" :technology="technology" />
-      </div>
+      <TechnologySection />
     </ContentSection>
 
     <ContentSection id="desafios">
@@ -133,10 +92,7 @@ const projects = ref([{ "href": "https://boobam.com.br/", "image": boobamImage, 
         // Alguns dos desafios técnicos superados ao longo da carreira.
       </SectionSubtitle>
 
-      <div class="relative pl-7">
-        <div class="absolute left-[11px] top-3 bottom-3 w-px bg-zinc-200"></div>
-        <ChallengeItem v-for="challenge in challenges" :key="challenge.title" :challenge="challenge" />
-      </div>
+      <ChallengeSection />
     </ContentSection>
 
     <ContentSection id="projetos">
@@ -146,9 +102,7 @@ const projects = ref([{ "href": "https://boobam.com.br/", "image": boobamImage, 
         // Projetos que ajudei a construir.
       </SectionSubtitle>
 
-      <div class="flex flex-col gap-10 md:gap-12">
-        <ProjectItem v-for="project in projects" :key="project.name" :project="project" />
-      </div>
+      <ProjectSection />
     </ContentSection>
   </main>
   <footer class="bg-zinc-700 text-zinc-100">
