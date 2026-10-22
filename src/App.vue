@@ -11,46 +11,46 @@ import avatarImage from './assets/images/avatar.jpeg'
 import boobamImage from './assets/images/boobam.png'
 import circuloImage from './assets/images/circulo.png'
 import estampotecaImage from './assets/images/estampoteca.png'
-import SourceIcon1 from './components/icons/SourceIcon1.vue'
-import SourceIcon2 from './components/icons/SourceIcon2.vue'
-import SourceIcon3 from './components/icons/SourceIcon3.vue'
-import SourceIcon4 from './components/icons/SourceIcon4.vue'
-import SourceIcon5 from './components/icons/SourceIcon5.vue'
-import SourceIcon6 from './components/icons/SourceIcon6.vue'
-import SourceIcon7 from './components/icons/SourceIcon7.vue'
-import SourceIcon8 from './components/icons/SourceIcon8.vue'
-import SourceIcon9 from './components/icons/SourceIcon9.vue'
-import SourceIcon10 from './components/icons/SourceIcon10.vue'
-import SourceIcon11 from './components/icons/SourceIcon11.vue'
-import SourceIcon12 from './components/icons/SourceIcon12.vue'
-import SourceIcon13 from './components/icons/SourceIcon13.vue'
-import SourceIcon14 from './components/icons/SourceIcon14.vue'
-import SourceIcon15 from './components/icons/SourceIcon15.vue'
-import SourceIcon16 from './components/icons/SourceIcon16.vue'
-import SourceIcon17 from './components/icons/SourceIcon17.vue'
-import SourceIcon18 from './components/icons/SourceIcon18.vue'
-import SourceIcon19 from './components/icons/SourceIcon19.vue'
-import SourceIcon20 from './components/icons/SourceIcon20.vue'
-import SourceIcon21 from './components/icons/SourceIcon21.vue'
+import LocationIcon from './components/icons/LocationIcon.vue'
+import EmailIcon from './components/icons/EmailIcon.vue'
+import WhatsAppIcon from './components/icons/WhatsAppIcon.vue'
+import LinkedInIcon from './components/icons/LinkedInIcon.vue'
+import PHPIcon from './components/icons/PHPIcon.vue'
+import JavaScriptIcon from './components/icons/JavaScriptIcon.vue'
+import DockerIcon from './components/icons/DockerIcon.vue'
+import GitIcon from './components/icons/GitIcon.vue'
+import HTMLIcon from './components/icons/HTMLIcon.vue'
+import CSSIcon from './components/icons/CSSIcon.vue'
+import MySQLIcon from './components/icons/MySQLIcon.vue'
+import PostgreSQLIcon from './components/icons/PostgreSQLIcon.vue'
+import RedisIcon from './components/icons/RedisIcon.vue'
+import NodeJSIcon from './components/icons/NodeJSIcon.vue'
+import VueIcon from './components/icons/VueIcon.vue'
+import ClaudeIcon from './components/icons/ClaudeIcon.vue'
+import CodeCraftersIcon from './components/icons/CodeCraftersIcon.vue'
+import DatabaseIcon from './components/icons/DatabaseIcon.vue'
+import APIIcon from './components/icons/APIIcon.vue'
+import StructureIcon from './components/icons/StructureIcon.vue'
+import SecurityIcon from './components/icons/SecurityIcon.vue'
 const navigation = ref([{ href: '#sobre', label: 'Sobre' }, { href: '#tecnologias', label: 'Stack' }, { href: '#desafios', label: 'Desafios' }, { href: '#projetos', label: 'Projetos' }])
-const contacts = ref([{ label: 'WhatsApp', href: 'https://wa.me/5547984247193', class: 'inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-100 bg-zinc-700 transition-colors hover:bg-zinc-800', icon: SourceIcon3 }, { label: 'LinkedIn', href: 'https://www.linkedin.com/in/diego-valgas/', class: 'inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-700 bg-transparent border border-zinc-200 transition-colors hover:bg-zinc-200 hover:border-zinc-400', icon: SourceIcon4 }])
-const technologies = ref([{ name: 'PHP', icon: SourceIcon5 },
-{ name: 'JavaScript', icon: SourceIcon6 },
-{ name: 'Docker', icon: SourceIcon7 },
-{ name: 'Git', icon: SourceIcon8 },
-{ name: 'HTML', icon: SourceIcon9 },
-{ name: 'CSS', icon: SourceIcon10 },
-{ name: 'MySQL', icon: SourceIcon11 },
-{ name: 'PostgreSQL', icon: SourceIcon12 },
-{ name: 'Redis', icon: SourceIcon13 },
-{ name: 'Node.js', icon: SourceIcon14 },
-{ name: 'Vue.js', icon: SourceIcon15 },
-{ name: 'Claude', icon: SourceIcon16 }])
-const challenges = ref([{ title: 'O código', description: 'Quando criança, você aprendeu seu idioma na escola: cada letra do alfabeto, cada regra gramatical, praticou a escrita à mão, tudo para se comunicar com as pessoas. Agora, você terá que passar por tudo isso novamente, mas desta vez para conversar com as máquinas.', icon: SourceIcon17 },
-{ title: 'Dados', description: 'Quando o quarto está uma bagunça, encontrar o que você precisa pode levar mais tempo, isso se você conseguir encontrar o que procura. O mesmo acontece com os dados, onde o desafio está em garantir que as coisas sejam colocadas no lugar certo desde o início. Afinal, você não precisa arrumar o quarto se ele não estiver bagunçado.', icon: SourceIcon18 },
-{ title: 'API', description: 'Comunicar-se com outros sistemas pode ser desafiador mesmo após muita experiência. Consumir serviços de APIs problemáticas e com documentação confusa é como estar perdido em um lugar onde as pessoas não falam o seu idioma.', icon: SourceIcon19 },
-{ title: 'Estrutura', description: 'O problema é parecido com o do quarto bagunçado: organização é essencial. Mas aqui estamos falando da estrutura de um sistema, onde uma boa arquitetura facilita a manutenção e o crescimento do software. Você aprendeu a escrever em um novo idioma; agora, é decidir onde cada assunto será escrito.', icon: SourceIcon20 },
-{ title: 'Segurança', description: 'Colocar um cadeado na porta não vai impedir que invadam sua casa, pois você pode ter deixado uma janela aberta. Proteger-se também é uma necessidade em sistemas, e o desafio é que, nesse caso, diferente da porta da sua casa, o mundo inteiro tem acesso às portas que dão acesso ao seu sistema.', icon: SourceIcon21 }])
+const contacts = ref([{ label: 'WhatsApp', href: 'https://wa.me/5547984247193', class: 'inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-100 bg-zinc-700 transition-colors hover:bg-zinc-800', icon: WhatsAppIcon }, { label: 'LinkedIn', href: 'https://www.linkedin.com/in/diego-valgas/', class: 'inline-flex items-center gap-2 py-2.5 px-5 rounded text-sm font-medium text-zinc-700 bg-transparent border border-zinc-200 transition-colors hover:bg-zinc-200 hover:border-zinc-400', icon: LinkedInIcon }])
+const technologies = ref([{ name: 'PHP', icon: PHPIcon },
+{ name: 'JavaScript', icon: JavaScriptIcon },
+{ name: 'Docker', icon: DockerIcon },
+{ name: 'Git', icon: GitIcon },
+{ name: 'HTML', icon: HTMLIcon },
+{ name: 'CSS', icon: CSSIcon },
+{ name: 'MySQL', icon: MySQLIcon },
+{ name: 'PostgreSQL', icon: PostgreSQLIcon },
+{ name: 'Redis', icon: RedisIcon },
+{ name: 'Node.js', icon: NodeJSIcon },
+{ name: 'Vue.js', icon: VueIcon },
+{ name: 'Claude', icon: ClaudeIcon }])
+const challenges = ref([{ title: 'O código', description: 'Quando criança, você aprendeu seu idioma na escola: cada letra do alfabeto, cada regra gramatical, praticou a escrita à mão, tudo para se comunicar com as pessoas. Agora, você terá que passar por tudo isso novamente, mas desta vez para conversar com as máquinas.', icon: CodeCraftersIcon },
+{ title: 'Dados', description: 'Quando o quarto está uma bagunça, encontrar o que você precisa pode levar mais tempo, isso se você conseguir encontrar o que procura. O mesmo acontece com os dados, onde o desafio está em garantir que as coisas sejam colocadas no lugar certo desde o início. Afinal, você não precisa arrumar o quarto se ele não estiver bagunçado.', icon: DatabaseIcon },
+{ title: 'API', description: 'Comunicar-se com outros sistemas pode ser desafiador mesmo após muita experiência. Consumir serviços de APIs problemáticas e com documentação confusa é como estar perdido em um lugar onde as pessoas não falam o seu idioma.', icon: APIIcon },
+{ title: 'Estrutura', description: 'O problema é parecido com o do quarto bagunçado: organização é essencial. Mas aqui estamos falando da estrutura de um sistema, onde uma boa arquitetura facilita a manutenção e o crescimento do software. Você aprendeu a escrever em um novo idioma; agora, é decidir onde cada assunto será escrito.', icon: StructureIcon },
+{ title: 'Segurança', description: 'Colocar um cadeado na porta não vai impedir que invadam sua casa, pois você pode ter deixado uma janela aberta. Proteger-se também é uma necessidade em sistemas, e o desafio é que, nesse caso, diferente da porta da sua casa, o mundo inteiro tem acesso às portas que dão acesso ao seu sistema.', icon: SecurityIcon }])
 const projects = ref([{ "href": "https://boobam.com.br/", "image": boobamImage, "alt": "Boobam - Plataforma brasileira com curadoria de peças de designers, artistas e arquitetos", "imageClass": "w-full h-full object-cover transition-transform duration-[400ms]", "linkClass": "", "infoClass": "", "year": "2023", "name": "Boobam", "description": "A Boobam é uma plataforma brasileira com curadoria de peças de designers, artistas e arquitetos, que conecta esses criadores diretamente a quem admira e compra design autoral. Ela oferece mobiliário, objetos e soluções personalizadas para ambientes, com um consultor que acompanha o cliente da escolha ao pós-venda.", "technologies": ["PHP", "Javascript"] }, { "href": "https://www.circulo.com.br/", "image": circuloImage, "alt": "Circulo - Tradicional marca brasileira de fios e linhas", "imageClass": "w-full h-full object-cover transition-transform duration-[400ms]", "linkClass": "md:order-2", "infoClass": "md:order-1", "year": "2022", "name": "Círculo", "description": "A Círculo é uma tradicional marca brasileira de fios e linhas para crochê, tricô e bordado, que oferece produtos inovadores e de alta qualidade para artesãos no Brasil e no exterior. Além disso, disponibiliza gratuitamente em seu site receitas, dicas, tendências e conteúdos em um blog para inspirar e auxiliar quem cria peças artesanais.", "technologies": ["Laravel", "JavaScript", "AWS"] }, { "href": "https://lancaster.com.br/", "image": estampotecaImage, "alt": "Lancaster - Estampoteca - Plataforma de Gestão de Estampas", "imageClass": "w-full h-full object-cover transition-transform duration-[400ms]", "linkClass": "", "infoClass": "", "year": "2021", "name": "Estampoteca", "description": "A Estampoteca é o acervo digital de estampas da Lancaster, onde os clientes podem visualizar todas as opções disponíveis, personalizar cores e elementos para criar padrões exclusivos e até solicitar amostras diretamente pelo sistema.", "technologies": ["Laravel", "JavaScript"] }])
 </script>
 
@@ -71,12 +71,12 @@ const projects = ref([{ "href": "https://boobam.com.br/", "image": boobamImage, 
           <a class="hidden lg:flex items-center text-sm text-zinc-500 gap-2"
             href="https://www.google.com/maps/place/Blumenau,+SC/@-26.8560081,-49.2639115,11z/data=!3m1!4b1!4m6!3m5!1s0x94df1e408b5c3095:0xacfb8520bc1a7644!8m2!3d-26.9165792!4d-49.0717331!16zL20vMDJ5Z2h6?entry=ttu&g_ep=EgoyMDI2MDkyMC4wIKXMDSoASAFQAw%3D%3D"
             target="_blank">
-            <SourceIcon1 />
+            <LocationIcon />
             Blumenau, SC
           </a>
 
           <a class="hidden lg:flex items-center text-sm text-zinc-500 gap-2 mb-4" href="mailto:diego.valgas@gmail.com">
-            <SourceIcon2 />
+            <EmailIcon />
             diego.valgas@gmail.com
           </a>
 
